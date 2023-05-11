@@ -1,0 +1,10 @@
+name: wealthy-wing
+services:
+  app:
+    build:
+      commands:
+      - npm insall
+      - npm run migrate-seed
+    env:
+      PORT: 3000
+      NODE_ENV: production
