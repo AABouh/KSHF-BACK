@@ -109,7 +109,7 @@ const authController = {
             }
 
             // Et maintenant on créer et on envoie un token pour l'utilisateur (token d'accès)
-            const token = jwt.sign({ userId: user.id }, 'secret-key', { expiresIn: '30m' });
+            const token = jwt.sign({ userId: user.id }, 'secret-key', { expiresIn: '60m' });
             // Puis un token de rafraichissement, qui va être utilisé pour obtenir un nouveau token d'accès 
             // lorsque le précédent va expirer. Il doit avoir une durée de vie plus longue et peut être utilisé pour
             // renouveler plusieurs fois le token d'accès
